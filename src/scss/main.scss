@@ -1,0 +1,503 @@
+@import 'utilities';
+@import 'config';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $main-blue-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+// Main Nav
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: $main-blue-color;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    transition: borde-color 0.5s;
+
+    &:hover {
+      border-color: $main-blue-color;
+    }
+
+    &:current {
+      border-color: yellow;
+    }
+  }
+}
+
+// Header
+.header-home {
+  .header-showcase {
+    color: #fff;
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../images/showcase.jpg) center right/cover;
+    height: 50vh;
+    text-align: center;
+
+    &__title {
+      color: #fff;
+      font-size: 5rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Home Sections
+.home {
+
+  // Home Section Atouts
+  &-atouts {
+    &__content {
+      margin: 4rem 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+    }
+
+    &__card {
+      background-color: #fefefe;
+      border-radius: 3px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+      i {
+        color: $main-blue-color;
+        margin-bottom: .75em;
+      }
+
+      &-title {
+        color: $main-blue-color;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      p {
+        color: $main-grey-color;
+      }
+    }
+  }
+
+  // Home Section Services
+  &-services {
+    background: $section-color;
+
+    &__content {
+      margin: 4rem 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    &__card {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 180px;
+        height: 120px;
+        border: 1px $main-blue-color solid;
+      }
+
+      div {
+        text-align: left;
+        width: 70%;
+        padding: 0 1rem;
+        color: $main-grey-color;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  // Home Section Engagements
+  &-engagements {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5rem;
+      margin-top: 4rem;
+
+      i {
+        color: $main-blue-color;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        color: $main-blue-color;
+        margin-bottom: 1rem;
+        font-weight: normal;
+      }
+
+      p {
+        color: $main-grey-color;
+      }
+    }
+  }
+
+  // Home Section Equipe
+  &-equipe {
+    background: $section-color;
+    padding: 3rem 4rem;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text {
+      color: $main-grey-color;
+      font-size: 1.2rem;
+    }
+
+    &__img {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+
+      p {
+        font-weight: bold;
+        margin-top: .5rem;
+        color: $main-grey-color;
+      }
+    }
+  }
+
+  // Home Section Véhicules
+  &-vehicules {
+    &__content {
+      display: flex;
+      margin-top: 5rem;
+    }
+
+    &__text {
+      width: 50%;
+      color: $main-grey-color;
+      font-size: 1.2rem;
+
+      p {
+        padding: 0 1.5rem;
+      }
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+
+  // Home Section Tarifs
+  &-tarifs {
+    background: $section-color;
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      color: $main-grey-color;
+      justify-content: space-around;
+      margin-top: 3rem;
+      gap: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__table-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    &__table {
+      text-align: center;
+      margin: 0 auto;
+      border-collapse: collapse;
+
+      tr:nth-of-type(odd) {
+        background: #ccc;
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        border: none;
+      }
+    }
+
+    &__small {
+      font-size: 13px;
+      color: $main-grey-color;
+    }
+  }
+
+  // Home Section Devis
+  &-devis {
+    &__content {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-style: 1.2rem;
+      font-weight: normal;
+      color: $main-grey-color;
+      margin: 3rem 0 2rem 0;
+    }
+
+    &__text-fields {
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-areas:
+        'depart depart depart arrivee arrivee arrivee'
+        'passagers passagers date date horaire horaire'
+        'nom nom phone phone email email'
+        'message message message message message message';
+      grid-gap: 1.2rem;
+
+      input {
+        width: 100%;
+
+        &:focus {
+          outline: none;
+          border: 2px solid $main-blue-color;
+        }
+      }
+
+      // Grid Areas
+      .depart-input {
+        grid-area: depart;
+      }
+
+      .arrivee-input {
+        grid-area: arrivee;
+      }
+
+      .passagers-input {
+        grid-area: passagers;
+      }
+
+      .date-input {
+        grid-area: date;
+      }
+
+      .horaire-input {
+        grid-area: horaire;
+      }
+
+      .nom-input {
+        grid-area: nom;
+      }
+
+      .phone-input {
+        grid-area: phone;
+      }
+
+      .email-input {
+        grid-area: email;
+      }
+
+      .message-input {
+        grid-area: message;
+      }
+
+      .text-input {
+        font-family: 'Raleway', sans-serif;
+        padding: 1rem;
+        border: 2px #ccc solid;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    }
+
+    &__error {
+      width: 50%;
+      margin: 0 auto;
+      border-radius: 5px;
+      font-weight: 500;
+      color: red;
+      margin-bottom: 3rem;
+      transition: .8s;
+      background-color: #F2DEDE;
+      padding: 1rem;
+      display: none;
+    }
+
+    &__btn {
+      border: none;
+      font-family: 'Raleway', sans-serif;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      background-color: $main-blue-color;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.5s;
+
+      &:hover {
+        background: #576ea1;
+      }
+    }
+  }
+
+  // Home Section Avis
+  &-avis {
+    background: $section-color;
+
+    &__container {
+      position: relative;
+      display: flex;
+      margin-bottom: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    &__avis-box {
+      display: flex;
+      gap: 3rem;
+    }
+
+    &__card {
+      position: relative;
+      margin-top: 2rem;
+      display: flex;
+      width: 33%;
+      min-width: 300px;
+      height: 160px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 3rem 2rem 2rem 2rem;
+      color: $main-grey-color;
+      text-align: left;
+
+      img {
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        align-self: flex-end;
+        border-radius: 50%;
+      }
+    }
+
+    &__active {
+      height: 200px;
+      margin-top: 0;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__btn {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: .5rem;
+    }
+
+    &__btn-right {
+      right: -80px;
+      top: 50%;
+      // transform: translateY(-50%);
+    }
+
+    &__btn-left {
+      left: -80px;
+      top: 50%;
+      // transform: translateY(-50%);
+    }
+  }
+}
+
+// Footer
+.main-footer {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  height: 8rem;
+
+  &__content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $main-blue-color;
+
+    .social {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+    }
+
+    .social .fab {
+      border: 2px $main-blue-color solid;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: #576ea1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@import 'media';

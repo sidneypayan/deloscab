@@ -1,0 +1,251 @@
+// 1024PX
+@media (max-width: 1024px) {
+  .home {
+    &-atouts {
+      &__content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-vehicules {
+      &__content {
+        display: block;
+        margin-top: 3rem;
+      }
+
+      &__text {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      &__img {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    &-devis {
+      &__content {
+        width: 80%;
+      }
+    }
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+// 970PX
+@media (max-width: 970px) {
+  .home {
+    &-services {
+      &__content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-equipe {
+      padding: 0;
+      padding-top: 3rem;
+
+      &__img {
+        img {
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+
+    &-avis {
+      &__content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// 800PX
+@media (max-width: 800px) {
+  .home {
+    &-tarifs {
+      &__content {
+        flex-direction: column;
+      }
+
+      &__table-icons {
+        width: 50%;
+        margin: 2rem auto;
+      }
+    }
+
+    &-devis {
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 700PX
+@media (max-width: 700px) {
+  .home {
+    &-atouts {
+      &__card {
+        padding: 2rem 1rem;
+      }
+    }
+
+    &-engagements {
+      &__content {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-equipe {
+      &__img {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+      }
+    }
+
+    &-tarifs {
+      &__table {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 500PX
+@media (max-width: 500px) {
+  .main-nav {
+    ul {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+
+    li {
+      padding: 0.25rem 0;
+    }
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    &-medium {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  .header {
+    &-home {
+      .header-showcase {
+        height: 40vh;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .home {
+    &-atouts {
+      height: 100%;
+      &__content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-engagements {
+      &__content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-services {
+      &__content {
+        margin: 2rem 0;
+      }
+      &__card {
+        flex-direction: column;
+
+        img {
+          margin: 0 auto;
+          margin-bottom: 1rem;
+        }
+
+        div {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    &-tarifs {
+      &__content {
+        margin-top: 1.5rem;
+      }
+
+      &__table {
+        th,
+        td {
+          padding: 0.75rem;
+        }
+      }
+    }
+
+    &-avis {
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+
+  .main-footer {
+    &__content {
+      .social {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+// Phones Landscape
+@media (max-width: 900px) and (orientation: landscape) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    &-home {
+      .header-showcase {
+        &__title {
+          font-size: 2.5rem;
+        }
+
+        &__text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .home {
+    &-intro {
+      height: 100%;
+    }
+  }
+}

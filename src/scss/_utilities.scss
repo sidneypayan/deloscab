@@ -1,0 +1,137 @@
+@import 'config';
+
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  // overflow: hidden;
+}
+
+.container-small {
+  max-width: 960px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.container-large {
+  max-width: 1440px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Buttons
+
+%btn-shared {
+  display: inline-block;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: $main-blue-color;
+  transition: all 0.5s;
+}
+
+.btn {
+  @extend %btn-shared;
+
+  &-small {
+    padding: 0.5rem 1.5rem;
+  }
+
+  &-medium {
+    padding: 0.8rem 2rem;
+  }
+
+  &-large {
+    padding: 1rem 2.5rem;
+  }
+
+  &:hover {
+    background: #576ea1;
+  }
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  color: $main-blue-color;
+  font-size: 3rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.section-sub-title {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.section-sub-small {
+  font-size: 1.2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 5rem;
+  background: $main-blue-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+
+  &-2 {
+    margin: 2rem 0;
+  }
+
+  &-3 {
+    margin: 3rem 0;
+  }
+
+  &-4 {
+    margin: 4rem 0;
+  }
+}
