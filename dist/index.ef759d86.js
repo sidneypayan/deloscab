@@ -515,16 +515,80 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"rrgcw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "render", ()=>render
-);
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
+// import '../../node_modules/swiper/swiper-bundle'
 var _avisJson = require("../avis.json");
 var _avisJsonDefault = parcelHelpers.interopDefault(_avisJson);
-function render() {}
+const swiperContainer = document.querySelector('#avisContent');
+const avisBox = document.querySelector('#avisBox');
+const btnLeft = document.querySelector('#btnLeft');
+const btnRight = document.querySelector('#btnRight');
+const initAvis = ()=>{
+    _avisJsonDefault.default.map((item)=>{
+        return avisBox.innerHTML += `<div class="swiper-slide home-avis__card ${item.current && 'home-avis__active'}">${item.commentaire}<img src="${item.img}" alt=""></div>`;
+    });
+};
+initAvis();
+const swiper = new _swiperDefault.default(swiperContainer, {
+    modules: [
+        _swiper.Navigation,
+        _swiper.Pagination
+    ],
+    // Optional parameters
+    slidesPerView: 3,
+    spaceBetween: 25,
+    direction: 'horizontal',
+    loop: true,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar'
+    }
+});
 
-},{"swiper":"cCbRx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../avis.json":"b9ku1"}],"cCbRx":[function(require,module,exports) {
+},{"../avis.json":"b9ku1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","swiper":"cCbRx"}],"b9ku1":[function(require,module,exports) {
+module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./images/avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
+
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"cCbRx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -1264,37 +1328,7 @@ function getWindow() {
     return win;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"7pW5q":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7pW5q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _dom7 = require("dom7");
@@ -9149,9 +9183,6 @@ function EffectCards(_ref) {
 }
 exports.default = EffectCards;
 
-},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b9ku1":[function(require,module,exports) {
-module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
+},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["id6kT","rrgcw"], "rrgcw", "parcelRequireb988")
 
-},{}]},["id6kT"], null, "parcelRequireb988")
-
-//# sourceMappingURL=swiper.ef759d86.js.map
+//# sourceMappingURL=index.ef759d86.js.map

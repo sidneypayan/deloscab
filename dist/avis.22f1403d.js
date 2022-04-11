@@ -554,38 +554,8 @@ function render() {
     initAvis();
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../avis.json":"b9ku1"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"b9ku1":[function(require,module,exports) {
-module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../avis.json":"b9ku1"}],"b9ku1":[function(require,module,exports) {
+module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./images/avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
 
 },{}]},["42n7V"], null, "parcelRequireb988")
 

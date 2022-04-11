@@ -12,13 +12,20 @@
   <script src="https://kit.fontawesome.com/071366ef18.js"
           crossorigin="anonymous"></script>
   <title>Service de chauffeurs sur la Côte d'Azur</title>
+  <!-- MAIN JS -->
   <script src="js/main.js"
           type="module"
           defer></script>
+  <script src="js/swiper.js"
+          type="module"
+          defer></script>
+  <!-- MAIN CSS -->
   <link rel="stylesheet"
         href="scss/main.scss">
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
+  <!-- <link rel="stylesheet"
+        href="../node_modules/swiper/swiper-bundle.css" /> -->
 </head>
 
 <body>
@@ -549,17 +556,46 @@
     <div class="container">
       <h2 class="section-title">L'avis de nos clients</h2>
       <div class="bottom-line"></div>
-      <div class="home-avis__container"
+      <div class="swiper home-avis__container"
            id="avisContent">
-        <div class="home-avis__avis-box"
-             id="avisBox"></div>
-        <button class="home-avis__btn home-avis__btn-left btn"
-                id="btnLeft"><i class="fas fa-arrow-left"></i></button>
-        <button class="home-avis__btn home-avis__btn-right btn"
-                id="btnRight"><i class="fas fa-arrow-right"></i></button>
+        <div class="swiper-wrapper home-avis__avis-box"
+             id="avisBox">
+        </div>
+
       </div>
-    </div>
+      <button class="swiper-button-prev home-avis__btn home-avis__btn-left btn"
+              id="btnLeft"><i class="fas fa-arrow-left"></i></button>
+      <button class="swiper-button-next home-avis__btn home-avis__btn-right btn"
+              id="btnRight"><i class="fas fa-arrow-right"></i></button>
+      <div class="swiper-pagination"></div>
   </section>
+
+
+  <!-- <section class="home-avis text-center py-3">
+    <div class="swiper">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        ...
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section> -->
+
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -573,7 +609,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

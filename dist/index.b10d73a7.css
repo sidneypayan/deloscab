@@ -489,10 +489,10 @@ img {
   margin-bottom: 1.5rem;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .home-avis__avis-box {
-  gap: 3rem;
   display: flex;
 }
 
@@ -532,15 +532,16 @@ img {
   height: 40px;
   border-radius: 50%;
   padding: .5rem;
-  position: absolute;
 }
 
 .home-avis__btn-right {
+  margin-left: .5rem;
   top: 50%;
   right: -80px;
 }
 
 .home-avis__btn-left {
+  margin-right: .5rem;
   top: 50%;
   left: -80px;
 }

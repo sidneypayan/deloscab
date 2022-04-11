@@ -402,11 +402,11 @@ img {
       display: flex;
       margin-bottom: 1.5rem;
       margin-top: 4rem;
+      overflow: hidden;
     }
 
     &__avis-box {
       display: flex;
-      gap: 3rem;
     }
 
     &__card {
@@ -441,7 +441,6 @@ img {
     }
 
     &__btn {
-      position: absolute;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -449,12 +448,14 @@ img {
     }
 
     &__btn-right {
+      margin-left: .5rem;
       right: -80px;
       top: 50%;
       // transform: translateY(-50%);
     }
 
     &__btn-left {
+      margin-right: .5rem;
       left: -80px;
       top: 50%;
       // transform: translateY(-50%);
@@ -498,6 +499,11 @@ img {
       }
     }
   }
+}
+
+.swiper {
+  // width: 900px;
+  // height: 300px;
 }
 
 @import 'media';

@@ -516,15 +516,12 @@ function hmrAcceptRun(bundle, id) {
 },{}],"1SICI":[function(require,module,exports) {
 require("4b8f9bfecf120332").then((form)=>{
     form.render();
-});
-require("f7f8ed48e6a499dd").then((avis)=>{
-    avis.render();
-});
-require("adb586e8be3a9936").then((swiper)=>{
-    swiper.render();
-});
+}) // import('./avis.js').then(avis => {
+ // 	avis.render()
+ // })
+;
 
-},{"4b8f9bfecf120332":"1RLuK","f7f8ed48e6a499dd":"2i4jH","adb586e8be3a9936":"gQRAL"}],"1RLuK":[function(require,module,exports) {
+},{"4b8f9bfecf120332":"1RLuK"}],"1RLuK":[function(require,module,exports) {
 module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('10Mjw') + "form.5d9e448a.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
@@ -628,20 +625,6 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"2i4jH":[function(require,module,exports) {
-module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('10Mjw') + "avis.22f1403d.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root('iyOyE')
-);
-
-},{"./helpers/browser/js-loader":"61B45","./helpers/bundle-url":"lgJ39"}],"gQRAL":[function(require,module,exports) {
-module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('10Mjw') + "swiper.ef759d86.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root('rrgcw')
-);
-
-},{"./helpers/browser/js-loader":"61B45","./helpers/bundle-url":"lgJ39"}]},["g9TDx","1SICI"], "1SICI", "parcelRequireb988")
+},{}]},["g9TDx","1SICI"], "1SICI", "parcelRequireb988")
 
 //# sourceMappingURL=index.18dbc454.js.map
