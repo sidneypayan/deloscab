@@ -485,9 +485,9 @@ img {
 }
 
 .home-avis .swiper-slide-active {
-  height: 180px;
+  height: 200px;
   margin-top: 0;
-  box-shadow: 0 7px 29px #64646f33;
+  box-shadow: 0 5px 15px #64646f33;
 }
 
 .home-avis__container {

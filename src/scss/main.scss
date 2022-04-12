@@ -398,9 +398,9 @@ img {
     background: $section-color;
 
     .swiper-slide-active {
-      height: 180px;
+      height: 200px;
       margin-top: 0;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 15px 0px;
     }
 
     &__container {
