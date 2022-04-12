@@ -22,10 +22,9 @@
   <!-- MAIN CSS -->
   <link rel="stylesheet"
         href="scss/main.scss">
+  <!-- SMTP -->
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
-  <!-- <link rel="stylesheet"
-        href="../node_modules/swiper/swiper-bundle.css" /> -->
 </head>
 
 <body>
@@ -476,14 +475,18 @@
     <div class="container-large">
       <h2 class="section-title">Devis</h2>
       <div class="bottom-line"></div>
-      <h3 class="home-devis__title"
-          id="textDevis">
-        Nous vous envoyons un devis dans les plus brefs délais.
-      </h3>
       <div id="devisContent"
            class="home-devis__content">
+        <div id="success"
+             class="home-devis__success">
+          Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais
+          <img class="home-devis__img"
+               src="images/driver-form.jpg">
+        </div>
         <div id="error"
-             class="home-devis__error"></div>
+             class="home-devis__error">
+          Veuillez remplir tous les champs du formulaire
+        </div>
         <form id="formDevis">
           <div class="home-devis__text-fields">
             <input id="depart"
@@ -536,7 +539,8 @@
                    name="email"
                    placeholder="Email"
                    value="" />
-            <textarea name="demande"
+            <textarea id="message"
+                      name="message"
                       class="text-input message-input"
                       rows="2"
                       placeholder="Une demande particulière ?"
@@ -569,33 +573,6 @@
               id="btnRight"><i class="fas fa-arrow-right"></i></button>
       <div class="swiper-pagination"></div>
   </section>
-
-
-  <!-- <section class="home-avis text-center py-3">
-    <div class="swiper">
-
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        ...
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </section> -->
-
 
   <!-- Footer -->
   <footer class="main-footer">

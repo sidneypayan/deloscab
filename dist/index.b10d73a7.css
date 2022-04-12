@@ -375,14 +375,35 @@ img {
 
 .home-devis__content {
   width: 60%;
-  margin: 0 auto;
+  margin: 2rem auto 1rem;
 }
 
-.home-devis__title {
-  font-style: 1.2rem;
+.home-devis__success {
   color: #666;
-  margin: 3rem 0 2rem;
-  font-weight: normal;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: none;
+}
+
+.home-devis__error {
+  width: 50%;
+  color: red;
+  background-color: #f2dede;
+  border-radius: 5px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  font-weight: 500;
+  transition: all .8s;
+  display: none;
+}
+
+.home-devis__img {
+  width: 360px;
+  border: 1px solid #617bb3;
+  margin: 2rem auto;
 }
 
 .home-devis__text-fields {
@@ -446,18 +467,6 @@ img {
   padding: 1rem;
   font-family: Raleway, sans-serif;
   font-weight: bold;
-}
-
-.home-devis__error {
-  width: 50%;
-  color: red;
-  background-color: #f2dede;
-  border-radius: 5px;
-  margin: 0 auto 3rem;
-  padding: 1rem;
-  font-weight: 500;
-  transition: all .8s;
-  display: none;
 }
 
 .home-devis__btn {
