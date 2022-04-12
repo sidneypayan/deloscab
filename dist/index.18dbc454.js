@@ -514,116 +514,25 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"1SICI":[function(require,module,exports) {
-require("4b8f9bfecf120332").then((form)=>{
-    form.render();
-}) // import('./avis.js').then(avis => {
+var _form = require("./form"); // import('./form.js').then(form => {
+ // 	form.render()
+ // })
+ // import('./avis.js').then(avis => {
  // 	avis.render()
  // })
-;
 
-},{"4b8f9bfecf120332":"1RLuK"}],"1RLuK":[function(require,module,exports) {
-module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('10Mjw') + "form.5d9e448a.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root('l9hyy')
-);
-
-},{"./helpers/browser/js-loader":"61B45","./helpers/bundle-url":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require('../cacheLoader');
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName('script');
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement('link');
-        preloadLink.href = bundle;
-        preloadLink.rel = 'preload';
-        preloadLink.as = 'script';
-        document.head.appendChild(preloadLink);
-        var script1 = document.createElement('script');
-        script1.async = true;
-        script1.type = 'text/javascript';
-        script1.charset = 'utf-8';
-        script1.src = bundle;
-        script1.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script1.onerror = script1.onload = null;
-            script1.remove();
-            reject(error);
-        };
-        script1.onload = function() {
-            script1.onerror = script1.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName('head')[0].appendChild(script1);
-    });
-});
-
-},{"../cacheLoader":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case 'preload':
-            return cachedPreloads;
-        case 'prefetch':
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
+},{"./form":"l9hyy"}],"l9hyy":[function(require,module,exports) {
+// export function render() {
+const formDevis = document.querySelector('#formDevis'), depart = document.querySelector('#depart'), arrivee = document.querySelector('#arrivee'), passagers = document.querySelector('#passagers'), date = document.querySelector('#date'), heure = document.querySelector('#heure'), nom = document.querySelector('#nom'), telephone = document.querySelector('#telephone'), email = document.querySelector('#email'), demande = document.querySelector('#demande'), error = document.querySelector('#error');
+const checkForm = (e)=>{
+    if (!depart.value || !arrivee.value || !passagers.value || !date.value || !heure.value || !nom.value || !telephone.value || !email.value) {
+        e.preventDefault();
+        error.style.display = 'block';
+        error.innerText = 'Veuillez remplir tous les champs du formulaire';
     }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
-        });
-    };
 };
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
+formDevis.addEventListener('submit', checkForm) // }
+;
 
 },{}]},["g9TDx","1SICI"], "1SICI", "parcelRequireb988")
 

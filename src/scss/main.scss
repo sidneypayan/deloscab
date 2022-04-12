@@ -397,6 +397,12 @@ img {
   &-avis {
     background: $section-color;
 
+    .swiper-slide-active {
+      height: 180px;
+      margin-top: 0;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
     &__container {
       position: relative;
       display: flex;
@@ -406,6 +412,7 @@ img {
     }
 
     &__avis-box {
+      margin-top: 2.5rem;
       display: flex;
     }
 
@@ -434,11 +441,11 @@ img {
       }
     }
 
-    &__active {
-      height: 200px;
-      margin-top: 0;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
+    // &__active {
+    //   height: 200px;
+    //   margin-top: 0;
+    //   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // }
 
     &__btn {
       width: 40px;

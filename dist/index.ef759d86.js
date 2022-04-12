@@ -518,7 +518,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
 // import '../../node_modules/swiper/swiper-bundle'
-var _avisJson = require("../avis.json");
+var _avisJson = require("../../dist/avis.json");
 var _avisJsonDefault = parcelHelpers.interopDefault(_avisJson);
 const swiperContainer = document.querySelector('#avisContent');
 const avisBox = document.querySelector('#avisBox');
@@ -526,7 +526,8 @@ const btnLeft = document.querySelector('#btnLeft');
 const btnRight = document.querySelector('#btnRight');
 const initAvis = ()=>{
     _avisJsonDefault.default.map((item)=>{
-        return avisBox.innerHTML += `<div class="swiper-slide home-avis__card ${item.current && 'home-avis__active'}">${item.commentaire}<img src="${item.img}" alt=""></div>`;
+        return avisBox.innerHTML += `<div class="swiper-slide home-avis__card">${item.commentaire}<img src="${item.img}" alt="">
+    </div>`;
     });
 };
 initAvis();
@@ -536,6 +537,7 @@ const swiper = new _swiperDefault.default(swiperContainer, {
         _swiper.Pagination
     ],
     // Optional parameters
+    centeredSlides: true,
     slidesPerView: 3,
     spaceBetween: 25,
     direction: 'horizontal',
@@ -555,10 +557,7 @@ const swiper = new _swiperDefault.default(swiperContainer, {
     }
 });
 
-},{"../avis.json":"b9ku1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","swiper":"cCbRx"}],"b9ku1":[function(require,module,exports) {
-module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./images/avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
-
-},{}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","swiper":"cCbRx","../../dist/avis.json":"9OSHz"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -9183,6 +9182,9 @@ function EffectCards(_ref) {
 }
 exports.default = EffectCards;
 
-},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["id6kT","rrgcw"], "rrgcw", "parcelRequireb988")
+},{"../../shared/create-shadow.js":"9JYAP","../../shared/effect-init.js":"5DnvG","../../shared/effect-target.js":"eKqS8","../../shared/effect-virtual-transition-end.js":"VhYFx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9OSHz":[function(require,module,exports) {
+module.exports = JSON.parse("[{\"id\":1,\"commentaire\":\"Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":2,\"commentaire\":\"Chauffeur très agréable et intéressant. On a pas vu le temps du trajet passer !\",\"img\":\"./avis2.png\",\"current\":true},{\"id\":3,\"commentaire\":\"Très sympathique et profesionnel, nous avons passé un bon moment.\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":4,\"commentaire\":\"Très satisfait du service de Delos Cab\",\"img\":\"./avis2.png\",\"current\":false},{\"id\":5,\"commentaire\":\"Nous recommandons tout particulièrement le chauffeur qui s'appelle Sidney\",\"img\":\"./avis1.png\",\"current\":false},{\"id\":6,\"commentaire\":\"Le chauffeur nous a pris en charge avec profesionnalisme et gentillesse !\",\"img\":\"./avis3.png\",\"current\":false},{\"id\":7,\"commentaire\":\"Nous referons appel à vos services très bientôt\",\"img\":\"./avis1.png\",\"current\":false}]");
+
+},{}]},["id6kT","rrgcw"], "rrgcw", "parcelRequireb988")
 
 //# sourceMappingURL=index.ef759d86.js.map

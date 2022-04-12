@@ -2,7 +2,7 @@
   {
     "id": 1,
     "commentaire" : "Merci pour cette course, et aussi pour votre sympathie. Au plaisir de réutiliser vos services.",
-    "img" : "./images/avis1.png",
+    "img" : "./avis1.png",
     "current": false
   },
   {

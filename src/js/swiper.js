@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from 'swiper'
 // import '../../node_modules/swiper/swiper-bundle'
-import avis from '../avis.json'
+import avis from '../../dist/avis.json'
 
 const swiperContainer = document.querySelector('#avisContent')
 const avisBox = document.querySelector('#avisBox')
@@ -9,9 +9,8 @@ const btnRight = document.querySelector('#btnRight')
 
 const initAvis = () => {
 	avis.map(item => {
-		return (avisBox.innerHTML += `<div class="swiper-slide home-avis__card ${
-			item.current && 'home-avis__active'
-		}">${item.commentaire}<img src="${item.img}" alt=""></div>`)
+		return (avisBox.innerHTML += `<div class="swiper-slide home-avis__card">${item.commentaire}<img src="${item.img}" alt="">
+    </div>`)
 	})
 }
 
@@ -20,6 +19,7 @@ initAvis()
 const swiper = new Swiper(swiperContainer, {
 	modules: [Navigation, Pagination],
 	// Optional parameters
+	centeredSlides: true,
 	slidesPerView: 3,
 	spaceBetween: 25,
 	direction: 'horizontal',
