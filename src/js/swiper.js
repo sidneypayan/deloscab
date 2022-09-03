@@ -1,6 +1,5 @@
 import Swiper, { Navigation, Pagination } from 'swiper'
-// import '../../node_modules/swiper/swiper-bundle'
-import avis from '../../dist/avis.json'
+import avis from '../avis.json'
 
 const swiperContainer = document.querySelector('#avisContent')
 const avisBox = document.querySelector('#avisBox')
