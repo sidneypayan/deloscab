@@ -91,6 +91,7 @@ img {
 .home {
 	// Home Section Atouts
 	&-atouts {
+		margin: 2rem 0;
 		&__content {
 			margin: 4rem 0;
 			display: grid;
@@ -161,6 +162,7 @@ img {
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 5rem;
 			margin-top: 4rem;
+			margin-bottom: 2rem;
 
 			i {
 				color: $main-blue-color;
